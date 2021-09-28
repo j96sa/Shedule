@@ -1,0 +1,172 @@
+body{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background: #000;
+    color:#eee;
+    font-family: 'Yaldevi', sans-serif;
+}
+/*MENSAJES DE LAS NOTAS*/
+.message p{
+    margin: 0;
+    text-align: center;
+    font-size: 1.3rem;
+    padding: 5px;
+}
+.removed{
+    background: #c00;
+}
+.added{    
+    background: #0a0;
+}
+
+
+
+/* estilos del boton para agregar las notas */
+.agenda{
+    margin-top: 20px;
+}
+.new-note{    
+    width: 30%;
+    max-width:120px ;
+    margin: auto;    
+}
+.new-note button{    
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1rem;
+}
+.new-note button img{
+    width: 100%;
+}
+
+
+/* estilos para la seccion de la nota y el listado de apuntes*/
+.container{
+    width: 95%;        
+    margin: 30px auto;
+    display: flex;  
+    flex-direction: column;  
+}
+
+/* note-list */
+.note-list{
+    margin-top: 20px;
+    text-align: center;
+    order: 1;
+}
+.note-list ul{
+    padding: 0;
+}
+.note-list li{
+    margin: auto;
+    font-size: .8rem;
+    display: flex;
+    justify-content: space-between;
+    background: #084;
+    list-style: none;
+    margin-top: 6px;
+    padding: 3px 8px;
+    border-radius: 2px;    
+}
+.note-list li button{
+    border: none;
+    cursor: pointer;    
+}
+.note-list li span{
+    color: #adf;
+}
+.note-list li button:nth-child(2){
+    background: #fd0;
+    padding: 0 10px;
+}
+.note-list li button:last-child{
+    background: #b00;
+}
+
+/* nota */
+.note{    
+    text-align: center;
+    width: 100%;
+}
+.note textarea{
+    resize: none;
+    outline: none;
+    font-family: 'Yaldevi', sans-serif;
+    font-size: 1.1rem;
+    width: 90%;
+    height: 350px;
+}
+.note .confirm-buttons{
+    display: flex;
+    justify-content: space-around;        
+}
+.confirm-buttons img{
+    width: 15%;
+    margin: 0 30px;
+    margin-top: 5px;
+    cursor: pointer;
+}
+
+
+/*BREAK 600PX*/
+@media only screen and (min-width:600px) {
+    .container{
+        max-width: 630px;
+    }
+    .note-list li{        
+        font-size: 1.3rem;
+        max-width: 580px;
+    }
+    .confirm-buttons img{
+        max-width: 57px;        
+    }
+}
+
+
+/* BREAK 1200PX */
+@media only screen and (min-width:1200px) {
+    .container{
+        margin-top: 80px;
+        justify-content: center;
+        display: grid;
+        gap: 0 50px;
+        grid-template-columns: repeat(2,minmax(200px,600px));
+        max-width: initial;
+    }
+
+    .note-list{
+        order: 0;
+    }
+
+    .note textarea{
+        width: 320px;
+        height: 580px;
+    }
+
+    .confirm-buttons{
+        margin: auto;
+        width: 70%;
+    }
+    .confirm-buttons img{
+        max-width: 67px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
