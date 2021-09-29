@@ -68,10 +68,13 @@ class Functions{
         
         //para mostrar el mensaje de confirmacion
         $message.innerText = "note added successfully";
+        $message.classList.remove("removed");
         $message.classList.add("added");
         setTimeout(() => {
-            $message.innerText = "";
-            $message.classList.remove("added")
+            if($message.classList.contains("added")){
+                $message.innerText = ""; 
+                $message.classList.remove("added");
+            };   
         }, 2500);
     };
 
@@ -113,8 +116,10 @@ d.addEventListener("click",e=>{
         $message.classList.remove("added");
         $message.classList.add("removed");
         setTimeout(() => {
-            $message.innerText = "";
-            $message.classList.remove("removed");
+            if($message.classList.contains("removed")){
+                $message.innerText = "";
+                $message.classList.remove("removed");
+            };
         }, 2500);
     };
 
