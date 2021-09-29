@@ -110,6 +110,7 @@ d.addEventListener("click",e=>{
 
         //mensaje de nota eliminada
         $message.innerText = "note removed successfully";
+        $message.classList.remove("added");
         $message.classList.add("removed");
         setTimeout(() => {
             $message.innerText = "";
